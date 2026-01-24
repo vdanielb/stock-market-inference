@@ -16,8 +16,7 @@ theme:
     - content.tabs.link
 
 nav:
-  - Home: index.md
-  - Project Report: project.md
+  - Report: index.md
 
 markdown_extensions:
   - pymdownx.highlight:
