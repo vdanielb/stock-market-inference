@@ -29,3 +29,7 @@ Our analysis reveals a **definitive structural break** in NVIDIA's trading patte
 - **Comparison with SPY**: Unlike SPY, which remains anchored to interest rates and inflation, NVDA now reacts primarily to its own earnings and liquidity flows, behaving as a distinct earnings engine rather than following traditional economic factors.
 
 - **Model Performance**: The macroeconomic model explains **48.2%** of variation in NVDA's daily returns (R² = 0.482)
+
+
+[READ THE FULL REPORT HERE](https://vdanielb.github.io/stock-market-inference/)
+
