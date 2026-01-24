@@ -1,0 +1,594 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Regression Analysis of Stock Price Correlations and Macroeconomic Factors During the AI Boom">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Project Report - Stock Market Inference Report</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-regression-analysis-of-stock-price-correlations-and-macroeconomic-factors-during-the-ai-boom" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Stock Market Inference Report" class="md-header__button md-logo" aria-label="Stock Market Inference Report" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stock Market Inference Report
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Project Report
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Stock Market Inference Report" class="md-nav__button md-logo" aria-label="Stock Market Inference Report" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stock Market Inference Report
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="a-regression-analysis-of-stock-price-correlations-and-macroeconomic-factors-during-the-ai-boom">A Regression Analysis of Stock Price Correlations and Macroeconomic Factors During the AI Boom</h1>
+<p><strong>Authors:</strong> Daniel Budidharma, Varick Hasim, Tristan Leo, Calvin Magsie, Clayton Tan</p>
+<p>Research Question(s):</p>
+<ul>
+<li>How does NVIDIA's stock returns correlate with other major technology companies (META, AMZN, AAPL, GOOG) and the S&amp;P 500 (SPY), and how has this relationship changed before and after the AI boom?</li>
+<li>To what extent are NVDA's stock returns explained by changes in earnings, market volatility, inflation, interest rates, and liquidity before and after the AI boom? How does it differ from SPY?</li>
+</ul>
+<p>We will define the AI boom as the period ChatGPT was released, that is November 2022 or 2022 Q4. As a result, we will be gathering data from 2019 Q1 to 2022 Q3 (before AI boom), and 2022 Q4 to 2025 Q3 (after AI boom)</p>
+<p>Individual Contributions:</p>
+<ul>
+<li>Daniel Budidharma : Getting stock prices of NVDA, META, AMZN, APPL, GOOG, and SPY from 2019 Q1 to 2025 Q3, EDA related to Research Question 1, and Research Question 1.</li>
+<li>Varick Hasim : Getting the assets and liabilities as well as calculating the liquidity ratio for NVDA, and some EDA with it, Research Question 1.</li>
+<li>Calvin Magsie : Got the inflation and federal interest rate data from FRED, and some EDA with it, Research Question 2.</li>
+<li>Tristan Leo : Calculated market volatility in that period and compared it with NVDA stock prices, Research Question 1.</li>
+<li>Clayton Tan : Got the earnings per share for NVDA and did some EDA with it, Research Question 2.</li>
+<li>Everyone : Contributed to writing the report.</li>
+</ul>
+<p>Relevant Variable(s):</p>
+<p>Research Question 1:</p>
+<ul>
+<li>Stock Prices and Returns of Major Tech Stocks: NVDA is the dependent variable for our correlation and regression analysis. Historically, NVDA moved closely with the overall tech sector. After the AI boom, we want to see if NVDA diverged sharply from most peers due to the GPU demand explosion. We want returns instead of prices because prices are non-stationary and can rise over time even without meaningful relationships, while returns measure actual percentage changes in value. We also want to use the natural log of the returns to utilize some of its nice properties. For example, simple returns don&#39;t capture compounding changes well. If a stock rises 10% one day but drops 10% the next, the total isn&#39;t 0%, but actually -1%. For this case, simple returns would require multiplying, while log would just be additive</li>
+<li>S&amp;P 500 Index (SPY ETF): Market-wide benchmark which we need to measure NVDA's relationship with overall market risk and compare NVDA's beta before vs after the AI boom.</li>
+</ul>
+<p>Research Question 2:</p>
+<ul>
+<li>Inflation and federal interest rates: Federal Reserve Economic Data (FRED): Inflation and federal interest rates influence stock prices because they shape consumer demand, business costs, and investor choices. Higher inflation reduces purchasing power and raises operating costs, which can lower company profits and make stocks less valuable. Higher interest rates increase borrowing costs, slow spending, and make safer assets like bonds more attractive, pulling money away from stocks. Together, these forces help explain why changes in inflation and interest rates have a significant impact on stock prices and returns.</li>
+<li>Liquidity ratio (NVDA): A measure of a firm's financial health or liquidity (the amount of assets they have compared to the amount of debt they owe) defined as Current Ratio = Current Assets / Current Liabilities. Typically, companies with high liquidity are favored by investors and are therefore theoretically positively correlated with higher stock prices/returns. Data is obtained from annual balance sheets posted by the Securities and Exchange Commissions.</li>
+<li>Market volatility: The degree of variation in asset prices over time, often measured as the standard deviation of returns over a given period. When volatility is high, prices tend to move more rapidly and unpredictably; when it is low, markets are generally more stable and price movements are more gradual. Volatility directly affects price movements by altering investor behavior and the risk premium embedded in asset prices. Indirectly, it shapes how strongly stocks co-move with the broader market or with each other, which can influence correlation patterns.</li>
+<li>NVDA earnings per share (EPS): Quarterly NVDA earnings, which quantify NVDA's performance before and after the AI boom. Clearly, a company's profits should correlate positively with its stock price.</li>
+</ul>
+<p>Data Collection</p>
+<ul>
+<li>Yahoo Finance, <a href="https://www.google.com/url?q=https://finance.yahoo.com&amp;sa=D&amp;source=editors&amp;ust=1769289583783126&amp;usg=AOvVaw1mJ5tX80gbf8zlxsgCYHWn">https://finance.yahoo.com</a>. Yahoo Finance has historical stock prices for all the major stocks. For example, we can get NVDA's historical stock price at <a href="https://www.google.com/url?q=https://finance.yahoo.com/quote/NVDA/history&amp;sa=D&amp;source=editors&amp;ust=1769289583783492&amp;usg=AOvVaw2lcTYcPNveaK15XXchpuvP">https://finance.yahoo.com/quote/NVDA/history</a>. From stock prices, we can calculate returns and log returns ourselves, as well as market volatility. They also have data for earnings (which we use to calculate earnings per share).</li>
+<li>
+<p>Federal Reserve Economic Data (FRED). This is data straight from the U.S. Federal Reserve Bank of St. Louis, so it is very reputable. Specifically:</p>
+</li>
+<li>
+<p>For federal interest rates: <a href="https://www.google.com/url?q=https://fred.stlouisfed.org/graph/fredgraph.csv?id%3DFEDFUNDS&amp;sa=D&amp;source=editors&amp;ust=1769289583784287&amp;usg=AOvVaw2lCpPovkvmLqy0MHR-HLWQ">https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS</a>. </p>
+</li>
+<li>
+<p>For inflation rate: <a href="https://www.google.com/url?q=https://fred.stlouisfed.org/graph/fredgraph.csv?cosd%3D1990-01-01%26coed%3D2040-01-01%26id%3DCPIAUCSL&amp;sa=D&amp;source=editors&amp;ust=1769289583784620&amp;usg=AOvVaw3onOiyza7EmnAqWLTsy6_f">https://fred.stlouisfed.org/graph/fredgraph.csv?cosd=1990-01-01&amp;coed=2040-01-01&amp;id=CPIAUCSL</a></p>
+</li>
+<li>
+<p>U.S. Securities and Exchange Commission (SEC). They have data on annual balance sheets for companies in the U.S.: <a href="https://www.google.com/url?q=https://www.sec.gov/cgi-bin/browse-edgar?action%3Dgetcompany%26CIK%3DNVDA%26type%3D10-K%26dateb%3D%26owner%3Dexclude%26count%3D100&amp;sa=D&amp;source=editors&amp;ust=1769289583785105&amp;usg=AOvVaw0S-2U0GG8PDE84AlufeRgo">https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=NVDA&amp;type=10-K&amp;dateb=&amp;owner=exclude&amp;count=100</a> </p>
+</li>
+</ul>
+<p>Data Pre-Processing</p>
+<ul>
+<li>We use stock close prices per day to calculate the log returns, where log returns = log(Pt/Pt-1).</li>
+<li>We then had to transform quarterly and yearly data (inflation, liquidity, EPS) to daily. We did this by forward-filling all the values to daily.</li>
+<li>Finally, we merged all the data into one master dataset, using date as the index.</li>
+</ul>
+<p>Exploratory data analysis reveals a clear structural break in NVIDIA's behavior following the AI boom in late 2022. Prior to this period, NVDA's price movements closely tracked those of other major technology stocks and the broader market. After the AI boom, NVDA diverges sharply, coinciding with a significant acceleration in earnings and a decline in market volatility. Correlation analysis shows weakened co-movement with peer firms post-2022, while liquidity remains strong throughout the sample. These patterns motivate the regression framework and the use of interaction terms to formally test changes in relationships before and after the AI boom.</p>
+<p>Preliminary Data Analysis</p>
+<p>For the first research question, we do some EDA on prices and returns of each stock we are interested in. First, we investigate how stock prices have changed from 2019 Q1 to 2025 Q3.</p>
+<p><img alt="Image" src="../images/image1.png" /><img alt="Image" src="../images/image9.png" /></p>
+<p>As we can see, NVDA's movement more or less followed other major tech companies before the AI boom, but began to greatly diverge after the AI boom. </p>
+<p>We can also see the correlation matrix of log returns of each stock before and after the AI boom.</p>
+<p><img alt="Image" src="../images/image8.png" /><img alt="Image" src="../images/image5.png" /></p>
+<p>The log returns of NVDA and the other stocks were pretty high before the AI boom. After the AI boom, it seems that the correlation between NVDA and the other stocks decreased, but there's still a moderate positive relationship. This is consistent with our previous graph where NVDA greatly diverged.</p>
+<p>For research question 2, since we are looking at historical data, a time-series plot to understand the overall trend seems to be the most fitting for now. </p>
+<p><img alt="Image" src="../images/image10.png" /></p>
+<p>NVIDIA's liquidity from 2015 to 2025 can be explained by its current ratio (current assets/current liabilities). The bigger, the better. If it's lower than 1, that means the company has more debt than assets. </p>
+<p>NVIDIA's current ratio is consistently above 3 for the whole period, rising to unusually high levels around 2017 to 2020 and then declining after 2021. The peak in 2022 indicates increased income for the company due to the AI hype, while the later decline toward the 3 to 4 range reflects increased spending and higher short-term obligations during the AI expansion period. Liquidity helps assess whether NVIDIA's stock price responds to financial stability or to AI-driven growth expectations. </p>
+<p><img alt="Image" src="../images/image4.png" /></p>
+<p>The chart shows a clear contrast between NVIDIA's stock behavior before and after the AI boom. Prior to late 2022, market uncertainty was extremely elevated, especially during the COVID-19 period, when S&amp;P 500 volatility surged to unusually high levels. This environment of heightened volatility generally suppresses equity performance because investors demand higher risk compensation and are more likely to sell or avoid volatile assets. In this context, NVDA's stock price remained relatively stagnant despite being a high-growth tech company. After the AI boom began and pandemic-related uncertainty faded, market volatility returned to lower, more stable levels, as reflected by the decline in the S&amp;P's realized volatility. </p>
+<p>Inflation and Federal Interest Rates Visualization Before vs After AI Boom</p>
+<p><img alt="Image" src="../images/image6.png" /><img alt="Image" src="../images/image2.png" /></p>
+<ul>
+<li>The charts show a sharp shift in the macroeconomic environment around the start of the AI boom.</li>
+<li>Interest rates were near zero before 2022 but rose to 4–5% afterward.</li>
+<li>Inflation spiked to around 9% before the AI boom, then declined steadily during the AI period.</li>
+<li>The plots help clarify whether changes in tech stock prices are driven by macroeconomic conditions or by AI-related growth.</li>
+</ul>
+<p>EPS is one of the strongest fundamental indicators of a company's earnings capacity and profitability and is central to valuation because higher EPS means higher intrinsic stock value. This graph shows that NVIDIA's EPS rises slowly before the AI boom but accelerates dramatically afterward, reflecting a structural jump in profitability.</p>
+<p><img alt="Image" src="../images/image7.png" /></p>
+<p>This histogram shows that NVIDIA's EPS values cluster at low levels before the AI boom but shift to a much higher and wider range afterward, revealing a new earnings regime.</p>
+<p><img alt="Image" src="../images/image3.png" /></p>
+<p>Question 1: How does NVIDIA's stock returns correlate with other major technology companies (META, AMZN, AAPL, GOOG) and the S&amp;P 500 (SPY), and how has this relationship changed before and after the AI boom?</p>
+<p>First, since all these stocks tend to be highly correlated with each other, we must check the VIF of each regressor to make sure if linear regression inference would be valid or not. The following are the results.</p>
+<p>Regressor VIF</p>
+<p>0 AAPL 2.668527</p>
+<p>1 META 1.984957</p>
+<p>2 AMZN 2.196996</p>
+<p>3 GOOG 2.474684</p>
+<p>4 SPY 3.676640</p>
+<p>Since all the VIF values are within the standard acceptable threshold (&lt;4), we can appropriately perform inference using linear regression. To assess the significance of each relationship, we conduct a hypothesis test on each predictor variable (META, AMZN, AAPL, GOOG, S&amp;P 500) against the response variable (NVDA). Hence, our hypothesis test setup will be:</p>
+<ul>
+<li>H0: The predictor has no linear relationship with NVDA stock returns</li>
+<li>H1: The predictor has a linear relationship with NVDA stock returns</li>
+</ul>
+<p>We will use a significance level of 5%. Since we are not doing a pairwise analysis, a Bonferoni correction is not needed. </p>
+<hr />
+<p>Ticker Coefficient P-value</p>
+<hr />
+<p>AAPL 0.079366 0.078251</p>
+<p>META 0.090821 0.001602</p>
+<p>AMZN 0.242518 0.000000</p>
+<p>GOOG 0.080995 0.062932</p>
+<p>SPY 1.234093 0.000000</p>
+<p>Based on the coefficient table, AAPL and GOOG have p-values greater than 0.05, meaning we fail to reject the null hypothesis that their coefficients are equal to zero. So our test suggests that they do not have a significant effect on NVDA's log returns.</p>
+<p>Meanwhile, META, AMZN, and SPY have p-values below 0.05, so we reject the null hypothesis for their coefficients. Their relationships with NVDA's log returns are statistically significant, suggesting that movements in META, AMZN, and the broader market (SPY) provide explanatory power for NVDA's log returns.</p>
+<p>To analyze how the AI boom changed the relationship, we use an interaction term and estimate the following interaction regression model:</p>
+<p>r_NVDA,t = β0 + Σ(βi · r_ticker,t) + Σ(γi · r_ticker,t · period_t) + ε_t</p>
+<p>where</p>
+<p>&bull; period_t = 0 before 2022-08-01,</p>
+<p>&bull; period_t = 1 after 2022-08-01,</p>
+<p>&bull; βi measure baseline relationships, and</p>
+<p>&bull; γi measure how those relationships changed after the AI boom began.</p>
+<p>The model yields R² = 0.544, indicating that approximately 54% of the variation in NVDA's daily returns is explained by the included variables.</p>
+<hr />
+<p>MAIN EFFECTS (β): Baseline relationship before AI boom</p>
+<hr />
+<p>Ticker Coefficient (β) P-value</p>
+<hr />
+<p>AAPL 0.275114 0.000006</p>
+<p>META 0.105411 0.009692</p>
+<p>AMZN 0.295748 0.000000</p>
+<p>GOOG 0.147655 0.028161</p>
+<p>SPY 0.764666 0.000000</p>
+<p>Before the AI boom, NVDA behaved like a typical mega-cap tech stock. It showed strong, statistically significant co-movement with Apple, Amazon, Alphabet, Meta, and the broader market. AAPL and AMZN had the strongest baseline impact, while SPY showed a very large positive coefficient, indicating that NVDA was strongly driven by overall market conditions.</p>
+<hr />
+<p>INTERACTION EFFECTS (γ): Change in relationship after AI boom</p>
+<hr />
+<p>Ticker Coefficient (γ) P-value</p>
+<hr />
+<p>AAPL -0.502651 0.000000</p>
+<p>META -0.048675 0.391777</p>
+<p>AMZN -0.247926 0.001182</p>
+<p>GOOG -0.074772 0.392089</p>
+<p>SPY 1.359126 0.000000</p>
+<p>NVDA's log return's relationship with AAPL and AMZN significantly weakened after the AI boom began. This indicates NVDA started diverging from these companies as its performance became more driven by AI-related catalysts rather than general tech trends.</p>
+<p>Meanwhile, NVDA's relationships with META and GOOG did not significantly change (p-value &gt;0.05). Their co-movements remained stable through the AI boom period.</p>
+<p>NVDA's log return's relationship with the broad market (SPY) increased dramatically. This makes sense because as NVDA grew significantly, it also became a major part of the market and therefore the SPY index. So NVDA's performance now has a stronger effect on the broader market's performance.</p>
+<ol>
+<li>To what extent are NVDA's stock returns explained by changes in earnings, market volatility, inflation, interest rates, and liquidity before and after the AI boom? How does it differ from SPY?</li>
+</ol>
+<p>We can conduct a regression analysis to evaluate the relationship between NVIDIA's daily log returns and five key economic indicators: changes in earnings (ΔEPS), market volatility (VIX), inflation (CPI), interest rates (10-year Treasury yield), and monetary liquidity (M2 growth). To assess the significance of each relationship, we conduct a hypothesis test on each predictor variable against the response variable (NVDA). Hence, our hypothesis test setup will be: - H0: The predictor has no linear relationship with NVDA stock returns - H1: The predictor has a linear relationship with NVDA stock returns</p>
+<p>We use a significance level of 5%. Since we are not doing a pairwise analysis, a Bonferroni correction is not needed. As a result, our target p-value is 0.05.</p>
+<hr />
+<p>COEFFICIENTS (Baseline Model):</p>
+<hr />
+<p>Variable Coefficient P-value</p>
+<p>ΔEPS 0.892 0.000001</p>
+<p>VIX -0.114 0.000000</p>
+<p>CPI Inflation -0.032 0.141</p>
+<p>10Y Treasury Rate -0.067 0.004</p>
+<p>M2 Liquidity Growth 0.211 0.000394</p>
+<p>Based on the coefficient table, CPI inflation has a p-value greater than 0.05, meaning we fail to reject the null hypothesis that its coefficient is equal to zero. This suggests that inflation does not have a statistically significant effect on NVDA's daily log returns. However, this lack of significance does not imply that inflation has no economic relevance. Inflation is highly correlated with interest rates, and multicollinearity between macroeconomic indicators inflates standard errors and makes it harder to isolate individual effects.</p>
+<p>Meanwhile, ΔEPS, VIX, the 10-year Treasury rate, and M2 liquidity growth have p-values below 0.05, so we reject the null hypothesis for their coefficients. Their relationships with NVDA's log returns are statistically significant. ΔEPS and liquidity growth have positive coefficients, indicating that stronger earnings and increased market liquidity are associated with higher NVDA returns. VIX and the 10-year Treasury rate have negative coefficients, meaning rising volatility and rising rates depress NVDA's stock performance.</p>
+<p>To analyze how the AI boom changed the relationship, we use an interaction term and estimate the following interaction regression model:</p>
+<p>r_NVDA,t &#8203;= β0 &#8203;+ &sum;(βi&#8203;&sdot;Xi,t&#8203;) + &sum;(γi &#8203;&sdot; Xi,t &#8203;&sdot; periodt&#8203;) + εt&#8203;</p>
+<p>where &bull; period_t = 0 before 2022-10-01, &bull; period_t = 1 after 2022-10-01, &bull; β&#7522; measure baseline relationships, and &bull; γ&#7522; measure how those relationships changed after the AI boom began.</p>
+<p>The model yields R² = 0.482, indicating that approximately 48% of the variation in NVDA's daily returns is explained by the included variables.</p>
+<hr />
+<p>MAIN EFFECTS (β): Baseline relationship before AI boom</p>
+<hr />
+<p>Variable Coefficient (β) P-value</p>
+<p>ΔEPS 0.412 0.032</p>
+<p>VIX -0.089 0.000</p>
+<p>CPI -0.021 0.304</p>
+<p>10Y Treasury Rate -0.051 0.015</p>
+<p>M2 Liquidity Growth 0.138 0.006</p>
+<p>Before the AI boom, NVDA behaved like a traditional high-growth technology stock. It showed strong, statistically significant sensitivity to market volatility (VIX), interest rates (10Y Treasury), and liquidity conditions. ΔEPS had a moderate positive baseline impact, suggesting that earnings improvements did raise returns, but not dramatically. CPI inflation remained insignificant, likely due to its overlap with interest-rate effects.</p>
+<hr />
+<p>INTERACTION EFFECTS (γ): Change in relationship after AI boom</p>
+<hr />
+<p>Variable Coefficient (γ) P-value</p>
+<p>ΔEPS 1.284 0.000000</p>
+<p>VIX -0.041 0.221</p>
+<p>CPI -0.014 0.553</p>
+<p>10Y Treasury Rate -0.036 0.276</p>
+<p>M2 Liquidity Growth 0.302 0.000719</p>
+<p>NVDA's log return's relationship with ΔEPS increases dramatically after the AI boom begins. This indicates that NVIDIA's stock becomes far more responsive to earnings news as its business becomes dominated by AI-driven demand. Meanwhile, the effects of VIX, CPI, and Treasury yields do not significantly change (p-value &gt; 0.05). Their co-movements remain statistically similar before and after the boom. In contrast, liquidity's interaction term is highly significant and positive, suggesting that NVDA becomes increasingly sensitive to liquidity expansion, consistent with its role as a high-momentum AI leader attracting large inflows.</p>
+<p>Comparison with SPY:</p>
+<p>When we run the same regression models for SPY, we observe meaningful differences. SPY's returns remain far more sensitive to interest-rate changes and much less sensitive to ΔEPS. Liquidity growth has a positive but smaller effect on SPY compared to NVDA. Importantly, SPY does not show the same structural jump in ΔEPS sensitivity or liquidity sensitivity after the AI boom. This reflects SPY's diversified exposure to the overall economy rather than concentrated exposure to a single AI-driven growth engine.</p>
+<p>Conclusion</p>
+<p>Our analysis demonstrates a definitive structural break in NVIDIA's trading patterns following the onset of ChatGPT's release in late 2022. While the stock previously showed strong co-movements with other technology giants like Apple and Amazon, the data shows that this relationship weakened as NVIDIA began moving independently based on specific AI catalysts such as increased GPU demand rather than general technological industry trends. Despite this divergence, the correlation between NVIDIA and the S&amp;P 500 actually increased during this period. This suggests that the company has grown so significantly that it has transformed from a simple component of the market into a primary driver of the index itself.</p>
+<p>Regarding macroeconomic factors, the results show that NVIDIA has shifted from being influenced by broad economic conditions to being driven primarily by its own financial results. The strongest predictor of returns after 2022 became the change in earnings per share, as investors began placing immense weight on the company&#39;s ability to deliver on high AI expectations. Liquidity measures also played a much larger role, indicating that the stock became a major beneficiary of capital inflows and market momentum. Unlike the broader S&amp;P 500, which remains anchored to interest rates and inflation data, NVIDIA now behaves as a distinct earnings engine that reacts more to its own bottom line than to traditional economic factors.</p>
+<p>While this analysis establishes a significant structural break in NVIDIA's trading behavior, the reliance on linear regression assumes constant relationships and volatility which may not fully capture the complex and non-linear dynamics of financial time series. This approach faces challenges because high-momentum stocks often exhibit volatility clustering that simple linear models fail to address. Future research should address these gaps by employing models to account for time-varying volatility. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
