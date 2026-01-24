@@ -1,0 +1,2156 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Regression Analysis of Stock Price Correlations and Macroeconomic Factors During the AI Boom">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Project Report - Stock Market Inference Report</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stock-market-analysis-report" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Stock Market Inference Report" class="md-header__button md-logo" aria-label="Stock Market Inference Report" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stock Market Inference Report
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Project Report
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Stock Market Inference Report" class="md-nav__button md-logo" aria-label="Stock Market Inference Report" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stock Market Inference Report
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Report
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data and Methodology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-an-investigation-of-stock-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First, an investigation of stock prices
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data and Methodology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-an-investigation-of-stock-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First, an investigation of stock prices
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stock-market-analysis-report">Stock Market Analysis Report</h1>
+<h2 id="data-and-methodology">Data and Methodology</h2>
+<p><strong>Data Period</strong>: 2019 Q1 - 2025 Q3</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">yfinance</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">yf</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dt</span>
+</code></pre></div>
+<h2 id="first-an-investigation-of-stock-prices">First, an investigation of stock prices</h2>
+<p>We get the close prices and volumes of each stock we are interested in. We also calculate the returns of each stock because prices are non-stationary and can rise over time even without meaningful relationships, while returns measure actual percentage changes in value. However, we want to use the the natural log of the returns to utilize some of its nice properties. For example, simple returns don't capture compounding changes well. If a stock rises 10% one day but drops 10% the next, the total isn't 0%, but actually -1%. For this case, simple returns would require multiplying, while log would just be additive.</p>
+<p>We should also note that because SPY includes large-cap AI-related firms, correlations between individual stocks and SPY partially reflect mechanical overlap as well as broader market co-movement. But we can and should still use SPY as a benchmark.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">AAPL</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;AAPL&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">META</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;META&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">AMZN</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;AMZN&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">NVDA</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;NVDA&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">GOOG</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;GOOG&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">SPY</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;SPY&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_returns</span><span class="p">(</span><span class="n">ticker</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">start_date</span> <span class="o">=</span> <span class="s2">&quot;2018-12-31&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">end_date</span> <span class="o">=</span> <span class="s2">&quot;2025-09-30&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">returns</span> <span class="o">=</span> <span class="n">ticker</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">returns</span><span class="p">[</span><span class="s1">&#39;simple_return&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">returns</span><span class="p">[</span><span class="s1">&#39;log_return&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">returns</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">returns</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[[</span><span class="s1">&#39;simple_return&#39;</span><span class="p">,</span> <span class="s1">&#39;log_return&#39;</span><span class="p">,</span> <span class="s1">&#39;Close&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume&#39;</span><span class="p">]]</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">returns</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">returns</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">date</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">returns</span> <span class="o">=</span> <span class="n">returns</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">return</span> <span class="n">returns</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">AAPL_returns</span> <span class="o">=</span> <span class="n">get_returns</span><span class="p">(</span><span class="n">AAPL</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">META_returns</span> <span class="o">=</span> <span class="n">get_returns</span><span class="p">(</span><span class="n">META</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">AMZN_returns</span> <span class="o">=</span> <span class="n">get_returns</span><span class="p">(</span><span class="n">AMZN</span><span class="p">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">NVDA_returns</span> <span class="o">=</span> <span class="n">get_returns</span><span class="p">(</span><span class="n">NVDA</span><span class="p">)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">GOOG_returns</span> <span class="o">=</span> <span class="n">get_returns</span><span class="p">(</span><span class="n">GOOG</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">SPY_returns</span> <span class="o">=</span> <span class="n">get_returns</span><span class="p">(</span><span class="n">SPY</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">AAPL_returns</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>simple_return</th>
+      <th>log_return</th>
+      <th>Close</th>
+      <th>Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-01-02</th>
+      <td>0.001141</td>
+      <td>0.001140</td>
+      <td>37.538822</td>
+      <td>148158800</td>
+    </tr>
+    <tr>
+      <th>2019-01-03</th>
+      <td>-0.099607</td>
+      <td>-0.104924</td>
+      <td>33.799679</td>
+      <td>365248800</td>
+    </tr>
+    <tr>
+      <th>2019-01-04</th>
+      <td>0.042689</td>
+      <td>0.041803</td>
+      <td>35.242558</td>
+      <td>234428400</td>
+    </tr>
+    <tr>
+      <th>2019-01-07</th>
+      <td>-0.002226</td>
+      <td>-0.002228</td>
+      <td>35.164112</td>
+      <td>219111200</td>
+    </tr>
+    <tr>
+      <th>2019-01-08</th>
+      <td>0.019063</td>
+      <td>0.018884</td>
+      <td>35.834446</td>
+      <td>164101200</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2025-09-23</th>
+      <td>-0.006443</td>
+      <td>-0.006464</td>
+      <td>254.183594</td>
+      <td>60275200</td>
+    </tr>
+    <tr>
+      <th>2025-09-24</th>
+      <td>-0.008332</td>
+      <td>-0.008367</td>
+      <td>252.065643</td>
+      <td>42303700</td>
+    </tr>
+    <tr>
+      <th>2025-09-25</th>
+      <td>0.018073</td>
+      <td>0.017912</td>
+      <td>256.621216</td>
+      <td>55202100</td>
+    </tr>
+    <tr>
+      <th>2025-09-26</th>
+      <td>-0.005489</td>
+      <td>-0.005504</td>
+      <td>255.212601</td>
+      <td>46076300</td>
+    </tr>
+    <tr>
+      <th>2025-09-29</th>
+      <td>-0.004032</td>
+      <td>-0.004040</td>
+      <td>254.183594</td>
+      <td>40127700</td>
+    </tr>
+  </tbody>
+</table>
+<p>1695 rows × 4 columns</p>
+</div>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">returns_data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="s1">&#39;NVDA&#39;</span><span class="p">:</span> <span class="n">NVDA_returns</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="s1">&#39;AAPL&#39;</span><span class="p">:</span> <span class="n">AAPL_returns</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="s1">&#39;META&#39;</span><span class="p">:</span> <span class="n">META_returns</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="s1">&#39;AMZN&#39;</span><span class="p">:</span> <span class="n">AMZN_returns</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="s1">&#39;GOOG&#39;</span><span class="p">:</span> <span class="n">GOOG_returns</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="s1">&#39;SPY&#39;</span><span class="p">:</span> <span class="n">SPY_returns</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">AIboom_cutoff</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">returns_data_befAI</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="s1">&#39;NVDA&#39;</span><span class="p">:</span> <span class="n">NVDA_returns</span><span class="p">[</span><span class="n">NVDA_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="s1">&#39;AAPL&#39;</span><span class="p">:</span> <span class="n">AAPL_returns</span><span class="p">[</span><span class="n">AAPL_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="s1">&#39;META&#39;</span><span class="p">:</span> <span class="n">META_returns</span><span class="p">[</span><span class="n">META_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="s1">&#39;AMZN&#39;</span><span class="p">:</span> <span class="n">AMZN_returns</span><span class="p">[</span><span class="n">AMZN_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="s1">&#39;GOOG&#39;</span><span class="p">:</span> <span class="n">GOOG_returns</span><span class="p">[</span><span class="n">GOOG_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="s1">&#39;SPY&#39;</span><span class="p">:</span> <span class="n">SPY_returns</span><span class="p">[</span><span class="n">SPY_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">AIboom_cutoff</span><span class="p">]</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="n">returns_data_aftAI</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="s1">&#39;NVDA&#39;</span><span class="p">:</span> <span class="n">NVDA_returns</span><span class="p">[</span><span class="n">NVDA_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="s1">&#39;AAPL&#39;</span><span class="p">:</span> <span class="n">AAPL_returns</span><span class="p">[</span><span class="n">AAPL_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="s1">&#39;META&#39;</span><span class="p">:</span> <span class="n">META_returns</span><span class="p">[</span><span class="n">META_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="s1">&#39;AMZN&#39;</span><span class="p">:</span> <span class="n">AMZN_returns</span><span class="p">[</span><span class="n">AMZN_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="s1">&#39;GOOG&#39;</span><span class="p">:</span> <span class="n">GOOG_returns</span><span class="p">[</span><span class="n">GOOG_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">],</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="s1">&#39;SPY&#39;</span><span class="p">:</span> <span class="n">SPY_returns</span><span class="p">[</span><span class="n">SPY_returns</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">]</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">plot_close_price_normalized</span><span class="p">(</span><span class="n">ticker_returns</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized Close Price of Major Tech Stocks and SPY (first date = 1)&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">AIboom_cutoff</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;AI Boom&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">returns_df</span> <span class="ow">in</span> <span class="n">ticker_returns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="n">normalized_close</span> <span class="o">=</span> <span class="n">returns_df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">returns_df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="n">normalized_close</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">plot_close_price_normalized</span><span class="p">(</span><span class="n">returns_data</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>c:\Users\danie\miniforge3\Lib\site-packages\pandas\plotting\_matplotlib\core.py:981: UserWarning: This axis already has a converter set and is updating to a potentially incompatible converter
+  return ax.plot(*args, **kwds)
+</code></pre></div>
+<p><img alt="png" src="../project_7_1.png" /></p>
+<p>Because NVDA dominates this graph we will get the log to get a better look</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">log_plot_close_price_normalized</span><span class="p">(</span><span class="n">ticker_returns</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Log Normalized Close Price of Major Tech Stocks and SPY (first date = 0)&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">AIboom_cutoff</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;AI Boom&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">returns_df</span> <span class="ow">in</span> <span class="n">ticker_returns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="n">normalized_close</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">returns_df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">returns_df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="n">normalized_close</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">log_plot_close_price_normalized</span><span class="p">(</span><span class="n">returns_data</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>c:\Users\danie\miniforge3\Lib\site-packages\pandas\plotting\_matplotlib\core.py:981: UserWarning: This axis already has a converter set and is updating to a potentially incompatible converter
+  return ax.plot(*args, **kwds)
+</code></pre></div>
+<p><img alt="png" src="../project_9_1.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">plot_log_returns</span><span class="p">(</span><span class="n">ticker_returns</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Log Return Major Tech Stocks and SPY&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">returns_df</span> <span class="ow">in</span> <span class="n">ticker_returns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="n">returns_df</span><span class="p">[</span><span class="s1">&#39;log_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">plot_log_returns</span><span class="p">(</span><span class="n">returns_data</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../project_10_0.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">plot_correlation_matrix</span><span class="p">(</span><span class="n">ticker_returns</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;log_return&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Correlation Matrix of Stock Log Returns&#39;</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">returns_data</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">returns_df</span> <span class="ow">in</span> <span class="n">ticker_returns</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="n">returns_data</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">returns_df</span><span class="p">[</span><span class="n">metric</span><span class="p">]</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">combined_returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">returns_data</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">combined_returns</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="n">plot_correlation_matrix</span><span class="p">(</span><span class="n">returns_data</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../project_11_0.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">plot_correlation_matrix</span><span class="p">(</span><span class="n">returns_data_befAI</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Correlation Matrix of Stock Log Returns Before AI Boom&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../project_12_0.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">plot_correlation_matrix</span><span class="p">(</span><span class="n">returns_data_aftAI</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Correlation Matrix of Stock Log Returns After AI Boom&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../project_13_0.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="s2">&quot;Quarter&quot;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="s2">&quot;2025Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2025Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2025Q1&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="s2">&quot;2023Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2023Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2023Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2023Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="s2">&quot;2022Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2022Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2022Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2022Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        <span class="s2">&quot;2021Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2021Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2021Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2021Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        <span class="s2">&quot;2020Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2020Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2020Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2020Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        <span class="s2">&quot;2019Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2019Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2019Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2019Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        <span class="s2">&quot;2018Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2018Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2018Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2018Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        <span class="s2">&quot;2017Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2017Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2017Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2017Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        <span class="s2">&quot;2016Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2016Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2016Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2016Q1&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        <span class="s2">&quot;2015Q4&quot;</span><span class="p">,</span><span class="s2">&quot;2015Q3&quot;</span><span class="p">,</span><span class="s2">&quot;2015Q2&quot;</span><span class="p">,</span><span class="s2">&quot;2015Q1&quot;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="p">],</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="s2">&quot;Total_Current_Assets&quot;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>        <span class="mi">102219</span><span class="p">,</span> <span class="mi">89935</span><span class="p">,</span> <span class="mi">80126</span><span class="p">,</span> <span class="mi">67040</span><span class="p">,</span> <span class="mi">59633</span><span class="p">,</span> <span class="mi">53729</span><span class="p">,</span> <span class="mi">44345</span><span class="p">,</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>        <span class="mi">32658</span><span class="p">,</span> <span class="mi">28797</span><span class="p">,</span> <span class="mi">24883</span><span class="p">,</span> <span class="mi">23073</span><span class="p">,</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>        <span class="mi">28829</span><span class="p">,</span> <span class="mi">25806</span><span class="p">,</span> <span class="mi">25806</span><span class="p">,</span> <span class="mi">18127</span><span class="p">,</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>        <span class="mi">16055</span><span class="p">,</span> <span class="mi">15161</span><span class="p">,</span> <span class="mi">14393</span><span class="p">,</span> <span class="mi">14681</span><span class="p">,</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>        <span class="mi">19584</span><span class="p">,</span> <span class="mi">13690</span><span class="p">,</span> <span class="mi">12420</span><span class="p">,</span> <span class="mi">11391</span><span class="p">,</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>        <span class="mi">10629</span><span class="p">,</span><span class="mi">10557</span><span class="p">,</span><span class="mi">11386</span><span class="p">,</span><span class="mi">10347</span><span class="p">,</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>        <span class="mi">11386</span><span class="p">,</span><span class="mi">10831</span><span class="p">,</span><span class="mi">9448</span><span class="p">,</span><span class="mi">9255</span><span class="p">,</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>        <span class="mi">8479</span><span class="p">,</span><span class="mi">8070</span><span class="p">,</span><span class="mi">8116</span><span class="p">,</span><span class="mi">8536</span><span class="p">,</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>        <span class="mi">8307</span><span class="p">,</span><span class="mi">6156</span><span class="p">,</span><span class="mi">5790</span><span class="p">,</span><span class="mi">6053</span><span class="p">,</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>        <span class="mi">5713</span><span class="p">,</span><span class="mi">5792</span><span class="p">,</span><span class="mi">5832</span><span class="p">,</span><span class="mi">5731</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>    <span class="p">],</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>    <span class="s2">&quot;Total_Current_Liabilities&quot;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>        <span class="mi">24257</span><span class="p">,</span><span class="mi">26542</span><span class="p">,</span><span class="mi">18047</span><span class="p">,</span><span class="mi">16479</span><span class="p">,</span><span class="mi">13969</span><span class="p">,</span><span class="mi">15223</span><span class="p">,</span><span class="mi">10631</span><span class="p">,</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>        <span class="mi">9101</span><span class="p">,</span><span class="mi">10334</span><span class="p">,</span><span class="mi">7260</span><span class="p">,</span><span class="mi">6563</span><span class="p">,</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>        <span class="mi">4335</span><span class="p">,</span><span class="mi">3612</span><span class="p">,</span><span class="mi">4448</span><span class="p">,</span><span class="mi">4004</span><span class="p">,</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>        <span class="mi">3925</span><span class="p">,</span><span class="mi">3669</span><span class="p">,</span><span class="mi">2410</span><span class="p">,</span><span class="mi">1930</span><span class="p">,</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>        <span class="mi">1903</span><span class="p">,</span><span class="mi">1784</span><span class="p">,</span><span class="mi">1475</span><span class="p">,</span><span class="mi">1331</span><span class="p">,</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>        <span class="mi">1389</span><span class="p">,</span><span class="mi">1622</span><span class="p">,</span><span class="mi">2252</span><span class="p">,</span><span class="mi">2300</span><span class="p">,</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>        <span class="mi">1608</span><span class="p">,</span><span class="mi">1462</span><span class="p">,</span><span class="mi">1106</span><span class="p">,</span><span class="mi">1153</span><span class="p">,</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>        <span class="mi">1032</span><span class="p">,</span><span class="mi">983</span><span class="p">,</span><span class="mi">823</span><span class="p">,</span><span class="mi">1788</span><span class="p">,</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>        <span class="mi">2041</span><span class="p">,</span><span class="mi">2407</span><span class="p">,</span><span class="mi">2377</span><span class="p">,</span><span class="mi">2351</span><span class="p">,</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>        <span class="mi">1488</span><span class="p">,</span><span class="mi">1495</span><span class="p">,</span><span class="mi">1459</span><span class="p">,</span><span class="mi">1487</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>    <span class="p">]</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="p">}</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="n">assets_liabilities</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Quarter&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="n">assets_liabilities</span><span class="p">[</span><span class="s1">&#39;Current_Ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">assets_liabilities</span><span class="p">[</span><span class="s1">&#39;Total_Current_Assets&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">assets_liabilities</span><span class="p">[</span><span class="s1">&#39;Total_Current_Liabilities&#39;</span><span class="p">]</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="c1"># Change Quarter to DatetimeIndex</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a><span class="n">quarter_to_date</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>    <span class="s2">&quot;2025Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2025Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2025Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-03-31&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2024Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>    <span class="s2">&quot;2023Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2023-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2023Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2023-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2023Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2023-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2023Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2023-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>    <span class="s2">&quot;2022Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2022Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2022Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2022Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>    <span class="s2">&quot;2021Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2021Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2021Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2021Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>    <span class="s2">&quot;2020Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2020Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2020Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2020Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>    <span class="s2">&quot;2019Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2019Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2019Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2019Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>    <span class="s2">&quot;2018Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2018Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2018Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2018Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>    <span class="s2">&quot;2017Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2017Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2017Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2017Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a>    <span class="s2">&quot;2016Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2016Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2016Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2016Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-03-31&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a>    <span class="s2">&quot;2015Q4&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-12-31&quot;</span><span class="p">,</span><span class="s2">&quot;2015Q3&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-09-30&quot;</span><span class="p">,</span><span class="s2">&quot;2015Q2&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-06-30&quot;</span><span class="p">,</span><span class="s2">&quot;2015Q1&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-03-31&quot;</span>
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="p">}</span>
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a><span class="n">assets_liabilities</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">assets_liabilities</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">quarter_to_date</span><span class="p">))</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="n">assets_liabilities</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="c1"># Rename Quarter to Date</span>
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a><span class="n">assets_liabilities</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Quarter&quot;</span><span class="p">:</span> <span class="s2">&quot;Date&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a><span class="n">assets_liabilities</span> <span class="o">=</span> <span class="n">assets_liabilities</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a><span class="n">assets_liabilities</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total_Current_Assets</th>
+      <th>Total_Current_Liabilities</th>
+      <th>Current_Ratio</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-09-30</th>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-06-30</th>
+      <td>89935</td>
+      <td>26542</td>
+      <td>3.388403</td>
+    </tr>
+    <tr>
+      <th>2025-03-31</th>
+      <td>80126</td>
+      <td>18047</td>
+      <td>4.439851</td>
+    </tr>
+    <tr>
+      <th>2024-12-31</th>
+      <td>67040</td>
+      <td>16479</td>
+      <td>4.068208</td>
+    </tr>
+    <tr>
+      <th>2024-09-30</th>
+      <td>59633</td>
+      <td>13969</td>
+      <td>4.268953</td>
+    </tr>
+    <tr>
+      <th>2024-06-30</th>
+      <td>53729</td>
+      <td>15223</td>
+      <td>3.529462</td>
+    </tr>
+    <tr>
+      <th>2024-03-31</th>
+      <td>44345</td>
+      <td>10631</td>
+      <td>4.171292</td>
+    </tr>
+    <tr>
+      <th>2023-12-31</th>
+      <td>32658</td>
+      <td>9101</td>
+      <td>3.588397</td>
+    </tr>
+    <tr>
+      <th>2023-09-30</th>
+      <td>28797</td>
+      <td>10334</td>
+      <td>2.786627</td>
+    </tr>
+    <tr>
+      <th>2023-06-30</th>
+      <td>24883</td>
+      <td>7260</td>
+      <td>3.427410</td>
+    </tr>
+    <tr>
+      <th>2023-03-31</th>
+      <td>23073</td>
+      <td>6563</td>
+      <td>3.515618</td>
+    </tr>
+    <tr>
+      <th>2022-12-31</th>
+      <td>28829</td>
+      <td>4335</td>
+      <td>6.650288</td>
+    </tr>
+    <tr>
+      <th>2022-09-30</th>
+      <td>25806</td>
+      <td>3612</td>
+      <td>7.144518</td>
+    </tr>
+    <tr>
+      <th>2022-06-30</th>
+      <td>25806</td>
+      <td>4448</td>
+      <td>5.801709</td>
+    </tr>
+    <tr>
+      <th>2022-03-31</th>
+      <td>18127</td>
+      <td>4004</td>
+      <td>4.527223</td>
+    </tr>
+    <tr>
+      <th>2021-12-31</th>
+      <td>16055</td>
+      <td>3925</td>
+      <td>4.090446</td>
+    </tr>
+    <tr>
+      <th>2021-09-30</th>
+      <td>15161</td>
+      <td>3669</td>
+      <td>4.132189</td>
+    </tr>
+    <tr>
+      <th>2021-06-30</th>
+      <td>14393</td>
+      <td>2410</td>
+      <td>5.972199</td>
+    </tr>
+    <tr>
+      <th>2021-03-31</th>
+      <td>14681</td>
+      <td>1930</td>
+      <td>7.606736</td>
+    </tr>
+    <tr>
+      <th>2020-12-31</th>
+      <td>19584</td>
+      <td>1903</td>
+      <td>10.291119</td>
+    </tr>
+    <tr>
+      <th>2020-09-30</th>
+      <td>13690</td>
+      <td>1784</td>
+      <td>7.673767</td>
+    </tr>
+    <tr>
+      <th>2020-06-30</th>
+      <td>12420</td>
+      <td>1475</td>
+      <td>8.420339</td>
+    </tr>
+    <tr>
+      <th>2020-03-31</th>
+      <td>11391</td>
+      <td>1331</td>
+      <td>8.558227</td>
+    </tr>
+    <tr>
+      <th>2019-12-31</th>
+      <td>10629</td>
+      <td>1389</td>
+      <td>7.652268</td>
+    </tr>
+    <tr>
+      <th>2019-09-30</th>
+      <td>10557</td>
+      <td>1622</td>
+      <td>6.508631</td>
+    </tr>
+    <tr>
+      <th>2019-06-30</th>
+      <td>11386</td>
+      <td>2252</td>
+      <td>5.055950</td>
+    </tr>
+    <tr>
+      <th>2019-03-31</th>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2018-12-31</th>
+      <td>11386</td>
+      <td>1608</td>
+      <td>7.080846</td>
+    </tr>
+    <tr>
+      <th>2018-09-30</th>
+      <td>10831</td>
+      <td>1462</td>
+      <td>7.408345</td>
+    </tr>
+    <tr>
+      <th>2018-06-30</th>
+      <td>9448</td>
+      <td>1106</td>
+      <td>8.542495</td>
+    </tr>
+    <tr>
+      <th>2018-03-31</th>
+      <td>9255</td>
+      <td>1153</td>
+      <td>8.026886</td>
+    </tr>
+    <tr>
+      <th>2017-12-31</th>
+      <td>8479</td>
+      <td>1032</td>
+      <td>8.216085</td>
+    </tr>
+    <tr>
+      <th>2017-09-30</th>
+      <td>8070</td>
+      <td>983</td>
+      <td>8.209563</td>
+    </tr>
+    <tr>
+      <th>2017-06-30</th>
+      <td>8116</td>
+      <td>823</td>
+      <td>9.861482</td>
+    </tr>
+    <tr>
+      <th>2017-03-31</th>
+      <td>8536</td>
+      <td>1788</td>
+      <td>4.774049</td>
+    </tr>
+    <tr>
+      <th>2016-12-31</th>
+      <td>8307</td>
+      <td>2041</td>
+      <td>4.070064</td>
+    </tr>
+    <tr>
+      <th>2016-09-30</th>
+      <td>6156</td>
+      <td>2407</td>
+      <td>2.557541</td>
+    </tr>
+    <tr>
+      <th>2016-06-30</th>
+      <td>5790</td>
+      <td>2377</td>
+      <td>2.435844</td>
+    </tr>
+    <tr>
+      <th>2016-03-31</th>
+      <td>6053</td>
+      <td>2351</td>
+      <td>2.574649</td>
+    </tr>
+    <tr>
+      <th>2015-12-31</th>
+      <td>5713</td>
+      <td>1488</td>
+      <td>3.839382</td>
+    </tr>
+    <tr>
+      <th>2015-09-30</th>
+      <td>5792</td>
+      <td>1495</td>
+      <td>3.874247</td>
+    </tr>
+    <tr>
+      <th>2015-06-30</th>
+      <td>5832</td>
+      <td>1459</td>
+      <td>3.997258</td>
+    </tr>
+    <tr>
+      <th>2015-03-31</th>
+      <td>5731</td>
+      <td>1487</td>
+      <td>3.854069</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Resample by daily frequency (fill quarterly values across days)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">assets_liabilities_daily</span> <span class="o">=</span> <span class="n">assets_liabilities</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Alternatively, if you want to align with your stock data date range:</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">start_date</span> <span class="o">=</span> <span class="s2">&quot;2019-01-01&quot;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">end_date</span> <span class="o">=</span> <span class="s2">&quot;2025-09-30&quot;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">date_range</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1"># Reindex to specific date range and forward fill</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="n">assets_liabilities_daily</span> <span class="o">=</span> <span class="n">assets_liabilities</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">date_range</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c1"># Filter out weekends (Saturday=5, Sunday=6)</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">assets_liabilities_weekdays</span> <span class="o">=</span> <span class="n">assets_liabilities_daily</span><span class="p">[</span><span class="n">assets_liabilities_daily</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">weekday</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c1"># Alternatively, you can use business day frequency from the start</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="n">start_date</span> <span class="o">=</span> <span class="s2">&quot;2019-01-01&quot;</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">end_date</span> <span class="o">=</span> <span class="s2">&quot;2025-09-30&quot;</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">business_days</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">bdate_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">)</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="c1"># Reindex to business days only and forward fill</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="n">assets_liabilities_business</span> <span class="o">=</span> <span class="n">assets_liabilities</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">business_days</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="n">assets_liabilities_business</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total_Current_Assets</th>
+      <th>Total_Current_Liabilities</th>
+      <th>Current_Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-01-01</th>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-02</th>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-03</th>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-04</th>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-07</th>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2025-09-24</th>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-25</th>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-26</th>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-29</th>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-30</th>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+  </tbody>
+</table>
+<p>1761 rows × 3 columns</p>
+</div>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># # Ensure both DataFrames have timezone-naive datetime indices</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1"># if NVDA_returns.index.tz is not None:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1">#     NVDA_returns.index = NVDA_returns.index.tz_localize(None)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">if</span> <span class="n">assets_liabilities_business</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    <span class="n">assets_liabilities_business</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">assets_liabilities_business</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">nvda_df</span> <span class="o">=</span> <span class="n">NVDA_returns</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">assets_liabilities_business</span><span class="p">,</span> <span class="n">left_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Now merge should work</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Merged dataframe shape: </span><span class="si">{</span><span class="n">nvda_df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="n">nvda_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="n">nvda_df</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Merged dataframe shape: (1695, 7)
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>simple_return</th>
+      <th>log_return</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Total_Current_Assets</th>
+      <th>Total_Current_Liabilities</th>
+      <th>Current_Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-01-02</th>
+      <td>0.020374</td>
+      <td>0.020170</td>
+      <td>3.377354</td>
+      <td>508752000</td>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-03</th>
+      <td>-0.060417</td>
+      <td>-0.062319</td>
+      <td>3.173305</td>
+      <td>705552000</td>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-04</th>
+      <td>0.064068</td>
+      <td>0.062099</td>
+      <td>3.376611</td>
+      <td>585620000</td>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-07</th>
+      <td>0.052941</td>
+      <td>0.051587</td>
+      <td>3.555370</td>
+      <td>709160000</td>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>2019-01-08</th>
+      <td>-0.024895</td>
+      <td>-0.025210</td>
+      <td>3.466859</td>
+      <td>786016000</td>
+      <td>10347</td>
+      <td>2300</td>
+      <td>4.498696</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2025-09-23</th>
+      <td>-0.028212</td>
+      <td>-0.028618</td>
+      <td>178.429993</td>
+      <td>192559600</td>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-24</th>
+      <td>-0.008182</td>
+      <td>-0.008216</td>
+      <td>176.970001</td>
+      <td>143564100</td>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-25</th>
+      <td>0.004068</td>
+      <td>0.004060</td>
+      <td>177.690002</td>
+      <td>191586700</td>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-26</th>
+      <td>0.002814</td>
+      <td>0.002810</td>
+      <td>178.190002</td>
+      <td>148573700</td>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+    <tr>
+      <th>2025-09-29</th>
+      <td>0.020540</td>
+      <td>0.020332</td>
+      <td>181.850006</td>
+      <td>193063500</td>
+      <td>102219</td>
+      <td>24257</td>
+      <td>4.214000</td>
+    </tr>
+  </tbody>
+</table>
+<p>1695 rows × 7 columns</p>
+</div>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Linear Regression on log_return based on current_ratio</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="c1"># Remove any NaN values</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="n">clean_data</span> <span class="o">=</span> <span class="n">nvda_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1"># Prepare the data</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">X</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;Current_Ratio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Independent variable</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">y</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;log_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># Dependent variable</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># Fit the linear regression model</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="c1"># Make predictions</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="c1"># Calculate statistics</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="n">correlation</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;Current_Ratio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;log_return&#39;</span><span class="p">])</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="c1"># Calculate p-value for correlation</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="n">_</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;Current_Ratio&#39;</span><span class="p">],</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;log_return&#39;</span><span class="p">])</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Linear Regression Results:&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Coefficient (slope): </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Intercept: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R-squared: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Correlation: </span><span class="si">{</span><span class="n">correlation</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P-value: </span><span class="si">{</span><span class="n">p_value</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="c1"># Plot the regression</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;Current_Ratio&#39;</span><span class="p">],</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;log_return&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data points&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;Current_Ratio&#39;</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Regression line&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Current Ratio&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Log Return&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Linear Regression: NVDA Log Return vs Current Ratio&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="c1"># Display regression equation</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Regression equation: log_return = </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> * Current_Ratio&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Linear Regression Results:
+Coefficient (slope): -0.000392
+Intercept: 0.004486
+R-squared: 0.000544
+Correlation: -0.023333
+P-value: 0.337027
+</code></pre></div>
+<p><img alt="png" src="../project_17_1.png" /></p>
+<div class="highlight"><pre><span></span><code>Regression equation: log_return = 0.004486 + -0.000392 * Current_Ratio
+</code></pre></div>
+<h1 id="question-one">Question One</h1>
+<p>How does NVIDIA’s stock returns correlate with other major technology companies (META, AMZN, AAPL, GOOG) and the S&amp;P 500 (SPY), and how has this relationship changed before and after the AI boom? First we merge all the data to Q1_df.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Merge all ticker_return dataframes on the date index</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">ticker_returns_list</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="p">(</span><span class="n">AAPL_returns</span><span class="p">,</span> <span class="s1">&#39;AAPL&#39;</span><span class="p">),</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="p">(</span><span class="n">META_returns</span><span class="p">,</span> <span class="s1">&#39;META&#39;</span><span class="p">),</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="p">(</span><span class="n">AMZN_returns</span><span class="p">,</span> <span class="s1">&#39;AMZN&#39;</span><span class="p">),</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="p">(</span><span class="n">NVDA_returns</span><span class="p">,</span> <span class="s1">&#39;NVDA&#39;</span><span class="p">),</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    <span class="p">(</span><span class="n">GOOG_returns</span><span class="p">,</span> <span class="s1">&#39;GOOG&#39;</span><span class="p">),</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    <span class="p">(</span><span class="n">SPY_returns</span><span class="p">,</span> <span class="s1">&#39;SPY&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="p">]</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="c1"># Create a list of dataframes with renamed columns</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">dfs_to_merge</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="k">for</span> <span class="n">df</span><span class="p">,</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">ticker_returns_list</span><span class="p">:</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    <span class="n">df_copy</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    <span class="c1"># Rename columns to include ticker name</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    <span class="n">df_copy</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">ticker</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_copy</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>    <span class="n">dfs_to_merge</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_copy</span><span class="p">)</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="c1"># Merge all dataframes on the index (date)</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="n">Q1_df</span> <span class="o">=</span> <span class="n">dfs_to_merge</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">dfs_to_merge</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>    <span class="n">Q1_df</span> <span class="o">=</span> <span class="n">Q1_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="n">Q1_df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AAPL_simple_return</th>
+      <th>AAPL_log_return</th>
+      <th>AAPL_Close</th>
+      <th>AAPL_Volume</th>
+      <th>META_simple_return</th>
+      <th>META_log_return</th>
+      <th>META_Close</th>
+      <th>META_Volume</th>
+      <th>AMZN_simple_return</th>
+      <th>AMZN_log_return</th>
+      <th>...</th>
+      <th>NVDA_Close</th>
+      <th>NVDA_Volume</th>
+      <th>GOOG_simple_return</th>
+      <th>GOOG_log_return</th>
+      <th>GOOG_Close</th>
+      <th>GOOG_Volume</th>
+      <th>SPY_simple_return</th>
+      <th>SPY_log_return</th>
+      <th>SPY_Close</th>
+      <th>SPY_Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-01-02</th>
+      <td>0.001141</td>
+      <td>0.001140</td>
+      <td>37.538822</td>
+      <td>148158800</td>
+      <td>0.035014</td>
+      <td>0.034415</td>
+      <td>134.848679</td>
+      <td>28146200</td>
+      <td>0.024741</td>
+      <td>0.024440</td>
+      <td>...</td>
+      <td>3.377354</td>
+      <td>508752000</td>
+      <td>0.009888</td>
+      <td>0.009839</td>
+      <td>51.937084</td>
+      <td>30652000</td>
+      <td>0.001040</td>
+      <td>0.001040</td>
+      <td>225.660126</td>
+      <td>126925200</td>
+    </tr>
+    <tr>
+      <th>2019-01-03</th>
+      <td>-0.099607</td>
+      <td>-0.104924</td>
+      <td>33.799679</td>
+      <td>365248800</td>
+      <td>-0.029039</td>
+      <td>-0.029469</td>
+      <td>130.932846</td>
+      <td>22717900</td>
+      <td>-0.025241</td>
+      <td>-0.025566</td>
+      <td>...</td>
+      <td>3.173305</td>
+      <td>705552000</td>
+      <td>-0.028484</td>
+      <td>-0.028898</td>
+      <td>50.457703</td>
+      <td>36822000</td>
+      <td>-0.023863</td>
+      <td>-0.024152</td>
+      <td>220.275284</td>
+      <td>144140700</td>
+    </tr>
+    <tr>
+      <th>2019-01-04</th>
+      <td>0.042689</td>
+      <td>0.041803</td>
+      <td>35.242558</td>
+      <td>234428400</td>
+      <td>0.047138</td>
+      <td>0.046061</td>
+      <td>137.104782</td>
+      <td>29002100</td>
+      <td>0.050064</td>
+      <td>0.048851</td>
+      <td>...</td>
+      <td>3.376611</td>
+      <td>585620000</td>
+      <td>0.053786</td>
+      <td>0.052390</td>
+      <td>53.171631</td>
+      <td>41878000</td>
+      <td>0.033496</td>
+      <td>0.032947</td>
+      <td>227.653580</td>
+      <td>142628800</td>
+    </tr>
+    <tr>
+      <th>2019-01-07</th>
+      <td>-0.002226</td>
+      <td>-0.002228</td>
+      <td>35.164112</td>
+      <td>219111200</td>
+      <td>0.000725</td>
+      <td>0.000725</td>
+      <td>137.204163</td>
+      <td>20089300</td>
+      <td>0.034353</td>
+      <td>0.033777</td>
+      <td>...</td>
+      <td>3.555370</td>
+      <td>709160000</td>
+      <td>-0.002167</td>
+      <td>-0.002169</td>
+      <td>53.056423</td>
+      <td>39638000</td>
+      <td>0.007885</td>
+      <td>0.007854</td>
+      <td>229.448547</td>
+      <td>103139100</td>
+    </tr>
+    <tr>
+      <th>2019-01-08</th>
+      <td>0.019063</td>
+      <td>0.018884</td>
+      <td>35.834446</td>
+      <td>164101200</td>
+      <td>0.032452</td>
+      <td>0.031937</td>
+      <td>141.656754</td>
+      <td>26263800</td>
+      <td>0.016612</td>
+      <td>0.016476</td>
+      <td>...</td>
+      <td>3.466859</td>
+      <td>786016000</td>
+      <td>0.007385</td>
+      <td>0.007358</td>
+      <td>53.448238</td>
+      <td>35298000</td>
+      <td>0.009395</td>
+      <td>0.009352</td>
+      <td>231.604309</td>
+      <td>102512600</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2025-09-23</th>
+      <td>-0.006443</td>
+      <td>-0.006464</td>
+      <td>254.183594</td>
+      <td>60275200</td>
+      <td>-0.012755</td>
+      <td>-0.012837</td>
+      <td>755.400024</td>
+      <td>10872600</td>
+      <td>-0.030400</td>
+      <td>-0.030872</td>
+      <td>...</td>
+      <td>178.429993</td>
+      <td>192559600</td>
+      <td>-0.002135</td>
+      <td>-0.002138</td>
+      <td>252.339996</td>
+      <td>17521100</td>
+      <td>-0.005444</td>
+      <td>-0.005458</td>
+      <td>663.210022</td>
+      <td>81708900</td>
+    </tr>
+    <tr>
+      <th>2025-09-24</th>
+      <td>-0.008332</td>
+      <td>-0.008367</td>
+      <td>252.065643</td>
+      <td>42303700</td>
+      <td>0.006963</td>
+      <td>0.006939</td>
+      <td>760.659973</td>
+      <td>8828200</td>
+      <td>-0.002265</td>
+      <td>-0.002268</td>
+      <td>...</td>
+      <td>176.970001</td>
+      <td>143564100</td>
+      <td>-0.017873</td>
+      <td>-0.018034</td>
+      <td>247.830002</td>
+      <td>16958500</td>
+      <td>-0.003182</td>
+      <td>-0.003187</td>
+      <td>661.099976</td>
+      <td>68082200</td>
+    </tr>
+    <tr>
+      <th>2025-09-25</th>
+      <td>0.018073</td>
+      <td>0.017912</td>
+      <td>256.621216</td>
+      <td>55202100</td>
+      <td>-0.015447</td>
+      <td>-0.015568</td>
+      <td>748.909973</td>
+      <td>10591100</td>
+      <td>-0.009355</td>
+      <td>-0.009399</td>
+      <td>...</td>
+      <td>177.690002</td>
+      <td>191586700</td>
+      <td>-0.005084</td>
+      <td>-0.005097</td>
+      <td>246.570007</td>
+      <td>17379800</td>
+      <td>-0.004614</td>
+      <td>-0.004624</td>
+      <td>658.049988</td>
+      <td>89622100</td>
+    </tr>
+    <tr>
+      <th>2025-09-26</th>
+      <td>-0.005489</td>
+      <td>-0.005504</td>
+      <td>255.212601</td>
+      <td>46076300</td>
+      <td>-0.006890</td>
+      <td>-0.006914</td>
+      <td>743.750000</td>
+      <td>9696300</td>
+      <td>0.007472</td>
+      <td>0.007444</td>
+      <td>...</td>
+      <td>178.190002</td>
+      <td>148573700</td>
+      <td>0.002474</td>
+      <td>0.002471</td>
+      <td>247.179993</td>
+      <td>16594600</td>
+      <td>0.005729</td>
+      <td>0.005713</td>
+      <td>661.820007</td>
+      <td>69179200</td>
+    </tr>
+    <tr>
+      <th>2025-09-29</th>
+      <td>-0.004032</td>
+      <td>-0.004040</td>
+      <td>254.183594</td>
+      <td>40127700</td>
+      <td>-0.000471</td>
+      <td>-0.000471</td>
+      <td>743.400024</td>
+      <td>9246800</td>
+      <td>0.010875</td>
+      <td>0.010816</td>
+      <td>...</td>
+      <td>181.850006</td>
+      <td>193063500</td>
+      <td>-0.011409</td>
+      <td>-0.011474</td>
+      <td>244.360001</td>
+      <td>23157200</td>
+      <td>0.002810</td>
+      <td>0.002806</td>
+      <td>663.679993</td>
+      <td>73499000</td>
+    </tr>
+  </tbody>
+</table>
+<p>1695 rows × 24 columns</p>
+</div>
+
+<p>Now we can conduct regression analysis. We would have to conduct a hypothesis test on each predictor variable vs the response variable, with the hypotheses being:<br />
+- H0: The predictor has no linear relationship with NVDA stock returns
+- H1: The predictor has a linear relationship with NVDA stock returns</p>
+<p>We will use a significance level of 5%. Note that we are not doing a pairwise analysis so we do not need to do a bonferroni correction</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Regression analysis: NVDA_log_return ~ all other tickers&#39; log_return</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1"># Prepare the data - extract log_return columns</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="n">log_return_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">Q1_df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;log_return&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="n">regression_data</span> <span class="o">=</span> <span class="n">Q1_df</span><span class="p">[</span><span class="n">log_return_cols</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1"># Remove any NaN values</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">clean_data</span> <span class="o">=</span> <span class="n">regression_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="c1"># Separate NVDA_log_return (dependent variable) from other tickers (independent variables)</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">y</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;NVDA_log_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="n">X_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">log_return_cols</span> <span class="k">if</span> <span class="n">col</span> <span class="o">!=</span> <span class="s1">&#39;NVDA_log_return&#39;</span><span class="p">]</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="n">X</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">X_cols</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="c1"># Add constant term for intercept (statsmodels requires this)</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="n">X_with_const</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="c1"># Fit the linear regression model using statsmodels (for p-values)</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_with_const</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="c1"># Get coefficients and p-values</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="n">coefficients</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Exclude intercept</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="n">p_values</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Exclude intercept</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="n">intercept</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="n">intercept_pvalue</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="c1"># Create a summary dataframe with coefficients and p-values</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="n">coefficients_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>    <span class="s1">&#39;Ticker&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_log_return&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">X_cols</span><span class="p">],</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>    <span class="s1">&#39;Coefficient&#39;</span><span class="p">:</span> <span class="n">coefficients</span><span class="p">,</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>    <span class="s1">&#39;P-value&#39;</span><span class="p">:</span> <span class="n">p_values</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a><span class="p">})</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="c1"># Calculate correlations</span>
+<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="n">correlations</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">X_cols</span><span class="p">:</span>
+<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a>    <span class="n">correlations</span><span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_log_return&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;NVDA_log_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+<a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>
+<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="c1"># Display results</span>
+<a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;REGRESSION ANALYSIS: NVDA_log_return ~ Other Tickers&#39; log_return&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Intercept: </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> (p-value: </span><span class="si">{</span><span class="n">intercept_pvalue</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R-squared: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adjusted R-squared: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">rsquared_adj</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Number of observations: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;COEFFICIENTS:&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Ticker&#39;</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Coefficient&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;P-value&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coefficients_df</span><span class="p">[</span><span class="s1">&#39;Ticker&#39;</span><span class="p">]):</span>
+<a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ticker</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">coefficients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;15.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">p_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;15.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CORRELATIONS with NVDA_log_return:&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a><span class="k">for</span> <span class="n">ticker</span><span class="p">,</span> <span class="n">corr</span> <span class="ow">in</span> <span class="n">correlations</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ticker</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">corr</span><span class="si">:</span><span class="s2">&gt;15.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a>
+<a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a><span class="c1"># Display the coefficients dataframe</span>
+<a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a><span class="n">coefficients_df</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>======================================================================
+REGRESSION ANALYSIS: NVDA_log_return ~ Other Tickers&#39; log_return
+======================================================================
+
+Intercept: 0.001165 (p-value: 0.033557)
+R-squared: 0.526087
+Adjusted R-squared: 0.524684
+
+Number of observations: 1695
+
+----------------------------------------------------------------------
+COEFFICIENTS:
+----------------------------------------------------------------------
+  Ticker     Coefficient         P-value
+----------------------------------------------------------------------
+    AAPL        0.079366        0.078251
+    META        0.090821        0.001602
+    AMZN        0.242518        0.000000
+    GOOG        0.080995        0.062932
+     SPY        1.234093        0.000000
+
+----------------------------------------------------------------------
+CORRELATIONS with NVDA_log_return:
+----------------------------------------------------------------------
+    AAPL:        0.587921
+    META:        0.530672
+    AMZN:        0.585315
+    GOOG:        0.574472
+     SPY:        0.704307
+
+======================================================================
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ticker</th>
+      <th>Coefficient</th>
+      <th>P-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AAPL</td>
+      <td>0.079366</td>
+      <td>7.825088e-02</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>META</td>
+      <td>0.090821</td>
+      <td>1.601734e-03</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AMZN</td>
+      <td>0.242518</td>
+      <td>1.429427e-10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GOOG</td>
+      <td>0.080995</td>
+      <td>6.293174e-02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SPY</td>
+      <td>1.234093</td>
+      <td>3.449551e-47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>We can see from here that AAPL and GOOG have a p-value &gt;0.05 so we fail to reject the null. Our test suggests that AAPL and GOOG log returns do NOT have a significant linear relationship with NVDA log returns. It should be noted this does not necessarily mean they lack a relationship with NVIDIA. High multicollinearity among these tech stocks inflates standard errors, making it difficult to isolate each company's unique effect.</p>
+<p>Meanwhile META, AMZN, and SPY have a p-value &lt;0.05 so we reject the null. Our test suggests that META, AMZN and SPY log returns DO have a significant linear relationship with NVDA log returns.</p>
+<h2 id="before-and-after-the-ai-boom">Before and After the AI boom</h2>
+<p>Now we split the Q1_df to before and after the AI boom</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Regression analysis: NVDA_log_return ~ all other tickers&#39; log_return</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1"># WITH INTERACTION TERMS for before/after AI boom</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="c1"># AI boom cutoff date</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">AIboom_cutoff</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="c1"># Prepare the data - extract log_return columns</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="n">log_return_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">Q1_df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;log_return&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="n">regression_data</span> <span class="o">=</span> <span class="n">Q1_df</span><span class="p">[</span><span class="n">log_return_cols</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1"># Remove any NaN values</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="n">clean_data</span> <span class="o">=</span> <span class="n">regression_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="c1"># Create period dummy variable: 0 = before AI boom, 1 = after AI boom</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">clean_data</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">AIboom_cutoff</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="c1"># Separate NVDA_log_return (dependent variable) from other tickers (independent variables)</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="n">y</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;NVDA_log_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="n">X_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">log_return_cols</span> <span class="k">if</span> <span class="n">col</span> <span class="o">!=</span> <span class="s1">&#39;NVDA_log_return&#39;</span><span class="p">]</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="c1"># Create main effect variables (before AI boom baseline)</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="n">X_main</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">X_cols</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="c1"># Create interaction terms (ticker_return * period_dummy)</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="n">X_interactions</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a><span class="n">interaction_names</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">X_cols</span><span class="p">:</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>    <span class="n">interaction</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>    <span class="n">X_interactions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">interaction</span><span class="p">)</span>
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>    <span class="n">interaction_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_log_return&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">_x_Period&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="c1"># Combine main effects and interaction terms</span>
+<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a><span class="n">X_combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">X_main</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span><span class="n">X_interactions</span><span class="p">)])</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a>
+<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a><span class="c1"># Add constant term for intercept (statsmodels requires this)</span>
+<a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a><span class="n">X_with_const</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_combined</span><span class="p">)</span>
+<a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a>
+<a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a><span class="c1"># Fit the linear regression model using statsmodels (for p-values)</span>
+<a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a><span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_with_const</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<a id="__codelineno-17-42" name="__codelineno-17-42" href="#__codelineno-17-42"></a>
+<a id="__codelineno-17-43" name="__codelineno-17-43" href="#__codelineno-17-43"></a><span class="c1"># Get coefficients and p-values</span>
+<a id="__codelineno-17-44" name="__codelineno-17-44" href="#__codelineno-17-44"></a><span class="n">intercept</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-17-45" name="__codelineno-17-45" href="#__codelineno-17-45"></a><span class="n">intercept_pvalue</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-17-46" name="__codelineno-17-46" href="#__codelineno-17-46"></a><span class="n">main_coefficients</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">X_cols</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Main effects (β)</span>
+<a id="__codelineno-17-47" name="__codelineno-17-47" href="#__codelineno-17-47"></a><span class="n">interaction_coefficients</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">X_cols</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Interaction effects (γ)</span>
+<a id="__codelineno-17-48" name="__codelineno-17-48" href="#__codelineno-17-48"></a><span class="n">main_pvalues</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">X_cols</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-17-49" name="__codelineno-17-49" href="#__codelineno-17-49"></a><span class="n">interaction_pvalues</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">X_cols</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+<a id="__codelineno-17-50" name="__codelineno-17-50" href="#__codelineno-17-50"></a>
+<a id="__codelineno-17-51" name="__codelineno-17-51" href="#__codelineno-17-51"></a><span class="c1"># Create summary dataframes</span>
+<a id="__codelineno-17-52" name="__codelineno-17-52" href="#__codelineno-17-52"></a><span class="n">main_effects_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<a id="__codelineno-17-53" name="__codelineno-17-53" href="#__codelineno-17-53"></a>    <span class="s1">&#39;Ticker&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_log_return&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">X_cols</span><span class="p">],</span>
+<a id="__codelineno-17-54" name="__codelineno-17-54" href="#__codelineno-17-54"></a>    <span class="s1">&#39;Coefficient (β)&#39;</span><span class="p">:</span> <span class="n">main_coefficients</span><span class="p">,</span>
+<a id="__codelineno-17-55" name="__codelineno-17-55" href="#__codelineno-17-55"></a>    <span class="s1">&#39;P-value&#39;</span><span class="p">:</span> <span class="n">main_pvalues</span>
+<a id="__codelineno-17-56" name="__codelineno-17-56" href="#__codelineno-17-56"></a><span class="p">})</span>
+<a id="__codelineno-17-57" name="__codelineno-17-57" href="#__codelineno-17-57"></a>
+<a id="__codelineno-17-58" name="__codelineno-17-58" href="#__codelineno-17-58"></a><span class="n">interaction_effects_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<a id="__codelineno-17-59" name="__codelineno-17-59" href="#__codelineno-17-59"></a>    <span class="s1">&#39;Ticker&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_x_Period&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">interaction_names</span><span class="p">],</span>
+<a id="__codelineno-17-60" name="__codelineno-17-60" href="#__codelineno-17-60"></a>    <span class="s1">&#39;Coefficient (γ)&#39;</span><span class="p">:</span> <span class="n">interaction_coefficients</span><span class="p">,</span>
+<a id="__codelineno-17-61" name="__codelineno-17-61" href="#__codelineno-17-61"></a>    <span class="s1">&#39;P-value&#39;</span><span class="p">:</span> <span class="n">interaction_pvalues</span>
+<a id="__codelineno-17-62" name="__codelineno-17-62" href="#__codelineno-17-62"></a><span class="p">})</span>
+<a id="__codelineno-17-63" name="__codelineno-17-63" href="#__codelineno-17-63"></a>
+<a id="__codelineno-17-64" name="__codelineno-17-64" href="#__codelineno-17-64"></a><span class="c1"># Calculate correlations</span>
+<a id="__codelineno-17-65" name="__codelineno-17-65" href="#__codelineno-17-65"></a><span class="n">correlations</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-17-66" name="__codelineno-17-66" href="#__codelineno-17-66"></a><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">X_cols</span><span class="p">:</span>
+<a id="__codelineno-17-67" name="__codelineno-17-67" href="#__codelineno-17-67"></a>    <span class="n">correlations</span><span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_log_return&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;NVDA_log_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+<a id="__codelineno-17-68" name="__codelineno-17-68" href="#__codelineno-17-68"></a>
+<a id="__codelineno-17-69" name="__codelineno-17-69" href="#__codelineno-17-69"></a><span class="c1"># Display results</span>
+<a id="__codelineno-17-70" name="__codelineno-17-70" href="#__codelineno-17-70"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-71" name="__codelineno-17-71" href="#__codelineno-17-71"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;REGRESSION ANALYSIS: NVDA_log_return ~ Other Tickers&#39; log_return&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-72" name="__codelineno-17-72" href="#__codelineno-17-72"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WITH INTERACTION TERMS (Before/After AI Boom)&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-73" name="__codelineno-17-73" href="#__codelineno-17-73"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-74" name="__codelineno-17-74" href="#__codelineno-17-74"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Model: r_NVDA,t = β₀ + Σ(βᵢ·r_ticker,t) + Σ(γᵢ·r_ticker,t·period_t) + ε_t&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-75" name="__codelineno-17-75" href="#__codelineno-17-75"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;where period_t = 0 (before </span><span class="si">{</span><span class="n">AIboom_cutoff</span><span class="si">}</span><span class="s2">), 1 (after </span><span class="si">{</span><span class="n">AIboom_cutoff</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-76" name="__codelineno-17-76" href="#__codelineno-17-76"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Intercept (β₀): </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> (p-value: </span><span class="si">{</span><span class="n">intercept_pvalue</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-77" name="__codelineno-17-77" href="#__codelineno-17-77"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R-squared: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-78" name="__codelineno-17-78" href="#__codelineno-17-78"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adjusted R-squared: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">rsquared_adj</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-79" name="__codelineno-17-79" href="#__codelineno-17-79"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Number of observations: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-80" name="__codelineno-17-80" href="#__codelineno-17-80"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - Before AI boom: </span><span class="si">{</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-81" name="__codelineno-17-81" href="#__codelineno-17-81"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - After AI boom: </span><span class="si">{</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-82" name="__codelineno-17-82" href="#__codelineno-17-82"></a>
+<a id="__codelineno-17-83" name="__codelineno-17-83" href="#__codelineno-17-83"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-84" name="__codelineno-17-84" href="#__codelineno-17-84"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAIN EFFECTS (β): Baseline relationship before AI boom&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-85" name="__codelineno-17-85" href="#__codelineno-17-85"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-86" name="__codelineno-17-86" href="#__codelineno-17-86"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Ticker&#39;</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Coefficient (β)&#39;</span><span class="si">:</span><span class="s2">&gt;18</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;P-value&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-87" name="__codelineno-17-87" href="#__codelineno-17-87"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-88" name="__codelineno-17-88" href="#__codelineno-17-88"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">main_effects_df</span><span class="p">[</span><span class="s1">&#39;Ticker&#39;</span><span class="p">]):</span>
+<a id="__codelineno-17-89" name="__codelineno-17-89" href="#__codelineno-17-89"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ticker</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">main_coefficients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;18.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">main_pvalues</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;15.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-90" name="__codelineno-17-90" href="#__codelineno-17-90"></a>
+<a id="__codelineno-17-91" name="__codelineno-17-91" href="#__codelineno-17-91"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-92" name="__codelineno-17-92" href="#__codelineno-17-92"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;INTERACTION EFFECTS (γ): Change in relationship after AI boom&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-93" name="__codelineno-17-93" href="#__codelineno-17-93"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-94" name="__codelineno-17-94" href="#__codelineno-17-94"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Ticker&#39;</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Coefficient (γ)&#39;</span><span class="si">:</span><span class="s2">&gt;18</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;P-value&#39;</span><span class="si">:</span><span class="s2">&gt;15</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-95" name="__codelineno-17-95" href="#__codelineno-17-95"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-96" name="__codelineno-17-96" href="#__codelineno-17-96"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">interaction_effects_df</span><span class="p">[</span><span class="s1">&#39;Ticker&#39;</span><span class="p">]):</span>
+<a id="__codelineno-17-97" name="__codelineno-17-97" href="#__codelineno-17-97"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ticker</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">interaction_coefficients</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;18.6f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">interaction_pvalues</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;15.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-98" name="__codelineno-17-98" href="#__codelineno-17-98"></a>
+<a id="__codelineno-17-99" name="__codelineno-17-99" href="#__codelineno-17-99"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-100" name="__codelineno-17-100" href="#__codelineno-17-100"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CORRELATIONS with NVDA_log_return:&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-101" name="__codelineno-17-101" href="#__codelineno-17-101"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-102" name="__codelineno-17-102" href="#__codelineno-17-102"></a><span class="k">for</span> <span class="n">ticker</span><span class="p">,</span> <span class="n">corr</span> <span class="ow">in</span> <span class="n">correlations</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-17-103" name="__codelineno-17-103" href="#__codelineno-17-103"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ticker</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">corr</span><span class="si">:</span><span class="s2">&gt;15.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-104" name="__codelineno-17-104" href="#__codelineno-17-104"></a>
+<a id="__codelineno-17-105" name="__codelineno-17-105" href="#__codelineno-17-105"></a><span class="c1"># Display the coefficients dataframes</span>
+<a id="__codelineno-17-106" name="__codelineno-17-106" href="#__codelineno-17-106"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-107" name="__codelineno-17-107" href="#__codelineno-17-107"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAIN EFFECTS SUMMARY:&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-108" name="__codelineno-17-108" href="#__codelineno-17-108"></a><span class="n">main_effects_df</span>
+<a id="__codelineno-17-109" name="__codelineno-17-109" href="#__codelineno-17-109"></a>
+<a id="__codelineno-17-110" name="__codelineno-17-110" href="#__codelineno-17-110"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+<a id="__codelineno-17-111" name="__codelineno-17-111" href="#__codelineno-17-111"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;INTERACTION EFFECTS SUMMARY:&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-112" name="__codelineno-17-112" href="#__codelineno-17-112"></a><span class="n">interaction_effects_df</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>================================================================================
+REGRESSION ANALYSIS: NVDA_log_return ~ Other Tickers&#39; log_return
+WITH INTERACTION TERMS (Before/After AI Boom)
+================================================================================
+
+Model: r_NVDA,t = β₀ + Σ(βᵢ·r_ticker,t) + Σ(γᵢ·r_ticker,t·period_t) + ε_t
+where period_t = 0 (before 2022-08-01), 1 (after 2022-08-01)
+
+Intercept (β₀): 0.001002 (p-value: 0.063210)
+R-squared: 0.544088
+Adjusted R-squared: 0.541381
+
+Number of observations: 1695
+  - Before AI boom: 901
+  - After AI boom: 794
+
+--------------------------------------------------------------------------------
+MAIN EFFECTS (β): Baseline relationship before AI boom
+--------------------------------------------------------------------------------
+  Ticker    Coefficient (β)         P-value
+--------------------------------------------------------------------------------
+    AAPL           0.275114        0.000006
+    META           0.105411        0.009692
+    AMZN           0.295748        0.000000
+    GOOG           0.147655        0.028161
+     SPY           0.764666        0.000000
+
+--------------------------------------------------------------------------------
+INTERACTION EFFECTS (γ): Change in relationship after AI boom
+--------------------------------------------------------------------------------
+  Ticker    Coefficient (γ)         P-value
+--------------------------------------------------------------------------------
+    AAPL          -0.502651        0.000000
+    META          -0.048675        0.391777
+    AMZN          -0.247926        0.001182
+    GOOG          -0.074772        0.392089
+     SPY           1.359126        0.000000
+
+--------------------------------------------------------------------------------
+CORRELATIONS with NVDA_log_return:
+--------------------------------------------------------------------------------
+    AAPL:        0.587921
+    META:        0.530672
+    AMZN:        0.585315
+    GOOG:        0.574472
+     SPY:        0.704307
+
+================================================================================
+MAIN EFFECTS SUMMARY:
+
+================================================================================
+INTERACTION EFFECTS SUMMARY:
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ticker</th>
+      <th>Coefficient (γ)</th>
+      <th>P-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AAPL</td>
+      <td>-0.502651</td>
+      <td>2.955777e-08</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>META</td>
+      <td>-0.048675</td>
+      <td>3.917768e-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AMZN</td>
+      <td>-0.247926</td>
+      <td>1.182498e-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GOOG</td>
+      <td>-0.074772</td>
+      <td>3.920888e-01</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SPY</td>
+      <td>1.359126</td>
+      <td>1.484409e-14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
