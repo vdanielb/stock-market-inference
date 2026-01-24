@@ -1,0 +1,29 @@
+site_name: Stock Market Inference Report
+site_description: A Regression Analysis of Stock Price Correlations and Macroeconomic Factors During the AI Boom
+
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Project Report: project.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
